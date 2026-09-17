@@ -13,35 +13,35 @@
 <!-- subscriptions:start -->
 | 客户端 | 订阅地址 |
 | --- | --- |
-| Surge / Egern | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.sgmodule](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.sgmodule) |
-| Quantumult X | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.conf](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.conf) |
-| Loon | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.lpx](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.lpx) |
-| Stash | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride) |
-| Shadowrocket | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module) |
+| Surge / Egern | [https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.sgmodule](https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.sgmodule) |
+| Quantumult X | [https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.conf](https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.conf) |
+| Loon | [https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.lpx](https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.lpx) |
+| Stash | [https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.stoverride](https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.stoverride) |
+| Shadowrocket | [https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.module](https://raw.githubusercontent.com/wuganlin/wloc/refs/heads/main/modules/wloc.module) |
 
-选点页面：[https://wloc.xepesw.workers.dev/](https://wloc.xepesw.workers.dev/)。
+选点页面：[https://wloc-spoofer.wuganlin877.workers.dev/](https://wloc-spoofer.wuganlin877.workers.dev/)。
 
-[浏览源码](https://github.com/xepes0/wloc) · [部署到 Cloudflare Workers](https://deploy.workers.cloudflare.com/?url=https://github.com/xepes0/wloc/tree/main/worker)
+[浏览源码](https://github.com/wuganlin/wloc) · [部署到 Cloudflare Workers](https://deploy.workers.cloudflare.com/?url=https://github.com/wuganlin/wloc/tree/main/worker)
 <!-- subscriptions:end -->
 
 Egern 沿用上游 Surge 模块兼容说明，尚未单独复核。Stash 使用原生 `.stoverride`。
 
 ## 快捷指令
 
-设置位置指令由维护者更新了解析服务地址，恢复位置指令沿用原作者版本。可在 iPhone 上打开以下完整地址并添加：
+可在 iPhone 上打开以下完整地址，添加设置位置和恢复位置快捷指令：
 
 | 快捷指令 | 安装入口 | 用途 |
 | --- | --- | --- |
-| WLOC设置位置 xepes0 | [https://www.icloud.com/shortcuts/0a6465168d554135b78008a8b4bd7c01](https://www.icloud.com/shortcuts/0a6465168d554135b78008a8b4bd7c01) | 从地图分享位置，解析坐标并保存到代理客户端 |
-| wloc 清理恢复位置 | [https://www.icloud.com/shortcuts/f42632d406504f24a2cd163af4fe012f](https://www.icloud.com/shortcuts/f42632d406504f24a2cd163af4fe012f) | 清除已保存的虚拟坐标 |
+| 设置位置 | [https://www.icloud.com/shortcuts/c1b7373b366c4c3a8e8f42e52fbb1363](https://www.icloud.com/shortcuts/c1b7373b366c4c3a8e8f42e52fbb1363) | 从地图分享位置，解析坐标并保存到代理客户端 |
+| 恢复位置 | [https://www.icloud.com/shortcuts/59881421700c426fb231e7bae01ba81f](https://www.icloud.com/shortcuts/59881421700c426fb231e7bae01ba81f) | 清除已保存的虚拟坐标 |
 
 **使用步骤：**
 
 1. 先启用本仓库对应的代理模块，完成 MITM 证书安装与信任。
-2. 在苹果地图长按选点 → 共享 → 选择「WLOC设置位置 xepes0」；高德地图可通过「分享 → 更多」进入分享菜单。
-3. 运行后打开地图验证结果。需要恢复时，运行「wloc 清理恢复位置」。若模块参数另设了坐标，还需关闭模块或恢复默认参数。
+2. 在苹果地图长按选点 → 共享 → 选择已安装的设置位置快捷指令；高德地图可通过「分享 → 更多」进入分享菜单。
+3. 运行后打开地图验证结果。需要恢复时，运行恢复位置快捷指令。若模块参数另设了坐标，还需关闭模块或恢复默认参数。
 
-> 设置位置指令基于原作者版本，由维护者将解析地址更新为 `https://wloc.xepesw.workers.dev/api/parse` 并重新分享；恢复位置指令仍为原作者分享。已安装的旧指令不会自动更新，请备份后安装新版或手动替换解析地址。尚未独立复核新版指令的真机运行结果。具体操作见[快捷指令迁移说明](docs/shortcut-guide.md#快捷指令)。
+> 本仓库当前解析服务地址为 `https://wloc-spoofer.wuganlin877.workers.dev/api/parse`。已安装的旧指令不会自动更新，请备份后安装新版或手动替换解析地址。尚未独立复核新版指令的真机运行结果。具体操作见[快捷指令迁移说明](docs/shortcut-guide.md#快捷指令)。
 
 ## 使用方法
 
@@ -66,7 +66,7 @@ npm run deploy
 
 本项目使用 Node.js 22 或更新版本；Wrangler 已固定到锁文件。部署不需要 KV 或数据库。Cloudflare Pages 配置也保留，见[部署说明](docs/DEPLOYMENT.md)。
 
-原作者的公共 Worker 和 Pages 不再作为默认选点服务；上方设置位置快捷指令已使用本仓库的新解析服务，自行部署时可按实际地址迁移。新维护者在 `project.config.json` 中填写仓库、发布分支及可选的选点站点，再运行：
+原作者的公共 Worker 和 Pages 不再作为默认选点服务；设置位置快捷指令应使用本仓库的新解析服务，自行部署时可按实际地址迁移。新维护者在 `project.config.json` 中填写仓库、发布分支及可选的选点站点，再运行：
 
 ```sh
 npm run configure
